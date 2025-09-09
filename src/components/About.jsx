@@ -7,17 +7,23 @@ const About = () => {
         <div className="row align-items-center">
           <div className="col-md-5 mb-4 mb-md-0">
             <h2 className="about-title">
-              From Concept To Execution,<br />
-              I Help You Bring Your Dreams To Life<br />
+              From Concept To Execution,{" "}
+              <i
+                className="bi bi-stars"
+                style={{ color: "rgba(168, 255, 54, 1)" }}
+              ></i>
+              <br />
+              I Help You Bring Your Dreams To Life
+              <br />
               With <span>Modern Designs.</span>
             </h2>
             {/* Tombol download CV */}
             <a
-              href="/cv.pdf"   // pastikan file ada di folder public/cv.pdf
+              href="/CV.pdf" // pastikan file ada di folder public/cv.pdf
               download
               className="btn btn-cv mt-4"
             >
-              <i className="bi bi-file-earmark-text"></i> Download CV
+              <i className="bi bi-folder2-open"></i> Download CV
             </a>
           </div>
 
