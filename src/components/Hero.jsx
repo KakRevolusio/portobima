@@ -3,12 +3,12 @@ import profileImg from "/Container1.png";
 
 const Hero = () => {
   return (
-    <><section className="hero">
+    <><section className="hero"id="home">
           <div className="container">
               <h1>
-                  Hello i’m <span>Beema</span>
-                  <br /> {/* harus ditutup seperti ini */}
-                  Digital Creative Designer
+                Hello i’m Beema
+                 <br /> {/* harus ditutup seperti ini */}
+Digital Creative Designer
               </h1>
 
               <div className="hero-img">

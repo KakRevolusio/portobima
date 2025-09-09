@@ -2,7 +2,7 @@ import React from "react";
 
 const ContactSection = () => {
   return (
-    <section
+    <section id="contact"
       className="contact-section py-5"
       style={{ backgroundColor: "rgba(21, 21, 21, 1)", color: "#fff" }}
     >
@@ -27,19 +27,19 @@ const ContactSection = () => {
               Stay Connected
             </p>
             <div className="d-flex gap-3 justify-content-md-end justify-content-start">
-              <a href="#" className="text-light fs-4">
+              <a href="https://wa.me/6281228944881" className="text-light fs-4">
                 <i className="bi bi-whatsapp"></i>
               </a>
-              <a href="#" className="text-light fs-4">
+              <a href="https://www.instagram.com/beemauix" className="text-light fs-4">
                 <i className="bi bi-instagram"></i>
               </a>
-              <a href="#" className="text-light fs-4">
+              <a href="https://www.linkedin.com/in/bimakarunia" className="text-light fs-4">
                 <i className="bi bi-linkedin"></i>
               </a>
-              <a href="#" className="text-light fs-4">
+              <a href="https://www.behance.net/beemauixstudio" className="text-light fs-4">
                 <i className="bi bi-behance"></i>
               </a>
-              <a href="#" className="text-light fs-4">
+              <a href="https://www.linkedin.com/in/bimakarunia" className="text-light fs-4">
                 <i className="bi bi-dribbble"></i>
               </a>
             </div>

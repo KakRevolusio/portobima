@@ -48,7 +48,7 @@ const Services = () => {
   };
 
   return (
-    <section style={styles.section}>
+    <section style={styles.section} id="services">
       <div className="container">
         <div className="row align-items-center">
           {/* Kolom kiri - teks */}
