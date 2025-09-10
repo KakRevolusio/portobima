@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const Services = () => {
   const services = [
@@ -35,12 +35,12 @@ const Services = () => {
       height: "100%",
       transition: "all 0.3s ease",
       cursor: "pointer",
-      boxShadow: "none", // default tidak ada shadow
+      boxShadow: "none",
     },
     cardHover: {
       backgroundColor: "rgba(168, 255, 54, 1)",
       color: "#000",
-      boxShadow: "0 0 20px rgba(168, 255, 54, 0.6)", // muncul hanya saat hover
+      boxShadow: "0 0 20px rgba(168, 255, 54, 0.6)",
     },
     subtitle: {
       color: "#aaa",
@@ -50,7 +50,8 @@ const Services = () => {
   return (
     <section style={styles.section} id="services">
       <div className="container">
-        <div className="row align-items-center">
+        {/* GANTI align-items-center -> align-items-start */}
+        <div className="row align-items-start">
           {/* Kolom kiri - teks */}
           <div className="col-md-6 mb-4">
             <h2 className="fw-bold mb-3">

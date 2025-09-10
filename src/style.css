@@ -13,6 +13,7 @@
   font-style: normal;
 }
 body {
+  margin: 25px; 
   background-color: rgba(21, 21, 21, 1); /* background abu gelap */
   color: #fff;
   font-family: Arial, sans-serif;
@@ -22,7 +23,7 @@ body {
 
 /* Navbar */
 .navbar {
-  background: transparent;
+  background-color: rgba(21, 21, 21, 1);
 }
 .navbar-nav .nav-link {
   color: white !important;
@@ -57,6 +58,16 @@ body {
 }
 
 /* Gambar hero */
+.hero-img.overlap {
+  margin-top: -100px; /* geser gambar ke atas */
+  position: relative;
+  z-index: 3; /* pastikan gambar di atas teks */
+}
+
+.hero h1 {
+  position: relative;
+  z-index: 2; /* teks di bawah gambar */
+}
 .hero-img {
   position: relative;
   margin-top: 40px;
@@ -84,6 +95,7 @@ body {
 }
 
 @media (max-width: 576px) { /* smartphone */
+  
   .hero h1 {
     font-size: 2.2rem;
     line-height: 1.3;
@@ -143,12 +155,20 @@ body {
   color: #fff;
   margin-bottom: 10px;
 }
-.stat-desc {
+/* .stat-desc {
   font-size: 0.95rem;
   color: #ccc;
   line-height: 1.5;
   max-width: 250px;
   margin: 0 auto;
+} */
+.stat-desc {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.5;
+  max-width: 250px;
+  margin: 0; /* hilangkan auto-center */
+  text-align: left; /* pastikan rata kiri */
 }
 
 /* Responsive */
@@ -194,10 +214,12 @@ body {
 }
 
 .about p {
-  font-size: 1,5rem;
+  font-size: 1.5rem; /* koma diganti titik supaya valid */
   line-height: 1.6;
   color: #ccc;
+  text-align: justify; /* ✅ rata kiri-kanan */
 }
+
 .about .highlight {
   color: #9DFF00;
   font-weight: 600;

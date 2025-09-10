@@ -6,7 +6,8 @@ const About = () => {
   return (
     <section className="about py-5" id="about">
       <div className="container">
-        <div className="row align-items-center">
+        {/* HAPUS align-items-center supaya rata atas */}
+        <div className="row">
           {/* Kolom kiri */}
           <div className="col-md-5 mb-4 mb-md-0">
             <h2 className="about-title">
@@ -25,23 +26,13 @@ const About = () => {
             <button
               className="btn btn-cv mt-4"
               onClick={() => setShowModal(true)}
-              style={{
-                backgroundColor: "rgba(168, 255, 54, 1)",
-                color: "#000",
-                border: "none",
-                borderRadius: "20px",
-                padding: "10px 20px",
-                fontWeight: "500",
-                cursor: "pointer",
-                transition: "all 0.3s ease",
-              }}
             >
               <i className="bi bi-eye"></i> Preview CV
             </button>
           </div>
 
           {/* Kolom kanan */}
-          <div className="col-md-7" style={{ fontSize: "22px" }}>
+          <div className="col-md-7">
             <p>
               Hello, I’m Bima, a{" "}
               <span className="highlight">Digital Creative</span> specializing
@@ -77,7 +68,7 @@ const About = () => {
             alignItems: "center",
             zIndex: 1000,
           }}
-          onClick={() => setShowModal(false)} // klik backdrop untuk tutup
+          onClick={() => setShowModal(false)}
         >
           <div
             className="modal-content"
@@ -91,9 +82,28 @@ const About = () => {
               padding: "20px",
               textAlign: "center",
             }}
-            onClick={(e) => e.stopPropagation()} // mencegah close saat klik isi modal
+            onClick={(e) => e.stopPropagation()}
           >
-            <h5 style={{ color: "#fff", marginBottom: "20px" }}>Preview CV</h5>
+            {/* Tombol Close di pojok kanan */}
+            <button
+              onClick={() => setShowModal(false)}
+              style={{
+                position: "absolute",
+                top: "15px",
+                right: "15px",
+                backgroundColor: "red",
+                color: "#fff",
+                border: "none",
+                borderRadius: "50%",
+                width: "40px",
+                height: "40px",
+                fontSize: "18px",
+                fontWeight: "bold",
+                cursor: "pointer",
+              }}
+            >
+              ×
+            </button>
 
             {/* iframe CV */}
             <iframe
@@ -106,24 +116,6 @@ const About = () => {
                 borderRadius: "10px",
               }}
             ></iframe>
-
-            {/* Tombol Close */}
-            <button
-              onClick={() => setShowModal(false)}
-              style={{
-                marginTop: "20px",
-                backgroundColor: "rgba(168, 255, 54, 1)",
-                color: "#000",
-                border: "none",
-                borderRadius: "20px",
-                padding: "10px 20px",
-                fontWeight: "500",
-                cursor: "pointer",
-                transition: "all 0.3s ease",
-              }}
-            >
-              <i className="bi bi-x-circle"></i> Close
-            </button>
           </div>
         </div>
       )}

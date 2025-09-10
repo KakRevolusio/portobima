@@ -36,26 +36,19 @@ const Project = () => {
     { id: 26, title: "Business Card Design", desc: "Kartu nama profesional.", category: "Graphic Design", image: "/Container1.png" },
     { id: 27, title: "Logo Design Pack", desc: "Paket desain logo modern.", category: "Graphic Design", image: "/Container1.png" },
   ];
-  const categories = ["UI/UX Design", "Social Media Design", "Graphic Design"];
+   const categories = ["UI/UX Design", "Social Media Design", "Graphic Design"];
   const [activeCategory, setActiveCategory] = useState("UI/UX Design");
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 9;
 
   const filteredProjects = projects.filter((p) => p.category === activeCategory);
-
   const totalPages = Math.ceil(filteredProjects.length / itemsPerPage);
-
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentProjects = filteredProjects.slice(indexOfFirstItem, indexOfLastItem);
 
-  const handlePrev = () => {
-    if (currentPage > 1) setCurrentPage(currentPage - 1);
-  };
-
-  const handleNext = () => {
-    if (currentPage < totalPages) setCurrentPage(currentPage + 1);
-  };
+  const handlePrev = () => currentPage > 1 && setCurrentPage(currentPage - 1);
+  const handleNext = () => currentPage < totalPages && setCurrentPage(currentPage + 1);
 
   return (
     <section
@@ -127,6 +120,7 @@ const Project = () => {
                     padding: "20px",
                     background: "linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))",
                     color: "#fff",
+                    textAlign: "left", // rata kiri
                     transition: "all 0.4s ease",
                   }}
                 >
@@ -191,7 +185,9 @@ const Project = () => {
 
       <style>{`
         .project-card:hover { transform: translateY(-5px); }
-        .project-card:hover .overlay-text { bottom: 30px; }
+        .project-card:hover .overlay-text { 
+          transform: translateY(-10px); /* tulisan naik */
+        }
       `}</style>
     </section>
   );
