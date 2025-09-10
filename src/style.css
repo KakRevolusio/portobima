@@ -113,7 +113,7 @@ body {
 .neon-bg {
   position: absolute;
   width: 600px;   /* neon lebih besar */
-  height: 600px;
+  height: 350px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(157,255,0,0.8), transparent 70%);
   top: 50%;
@@ -178,6 +178,11 @@ body {
   }
   .stat-desc {
     font-size: 0.85rem;
+  }
+  .neon-bg {
+    width: 250px;   /* diperkecil agar pas di layar hp */
+    height: 150px;
+    filter: blur(60px); /* blur juga disesuaikan biar lembut */
   }
 }
 
