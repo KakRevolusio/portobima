@@ -46,14 +46,21 @@ const Experience = () => {
         {/* Header */}
         <div className="row mb-5">
           <div className="col-md-6">
-            <p style={{ color: "#aaa" }}>
-              Whether it's designing a sleek user interface or writing code that
+           <p
+  style={{
+    color: "#8d8d8d",
+    fontSize: "1.5rem",
+  }}
+>
+              Whether it's designing a sleek user interface or
+              <br /> writing code that
               brings it to life,
             </p>
           </div>
           <div className="col-md-6 text-end">
             <h2 className="fw-bold">
               A Yearly Snapshot Of My{" "}
+              <br />
               <span style={{ color: "rgba(168, 255, 54, 1)" }}>
                 Creative Growth
               </span>
@@ -93,7 +100,7 @@ const Experience = () => {
               </div>
 
               {/* Kolom 4: Duration + Button */}
-              <div className="col-md-4 d-flex justify-content-between align-items-start">
+              <div className="col-md-3 d-flex justify-content-between align-items-start">
                 <div>
                   <small style={{ color: "#aaa" }}>Duration</small>
                   <p className="mb-0">{exp.duration}</p>
@@ -106,7 +113,7 @@ const Experience = () => {
                       openIndex === index
                         ? "rgba(168, 255, 54, 1)"
                         : "rgba(40, 40, 40, 1)",
-                    color: openIndex === index ? "#000" : "#fff",
+                    color: openIndex === index ? "#000" : "#8d8d8d",
                     borderRadius: "25px",
                   }}
                 >

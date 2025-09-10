@@ -6,7 +6,7 @@ const Hero = () => {
     <>
       <section className="hero" id="home">
         <div className="container">
-          <h1>
+          <h1 className="texhero">
             Hello i’m Beema
             <br />
             Digital Creative Designer

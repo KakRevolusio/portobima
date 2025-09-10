@@ -30,6 +30,7 @@ const Services = () => {
     card: {
       backgroundColor: "rgba(40, 40, 40, 1)",
       color: "#fff",
+  
       padding: "20px",
       borderRadius: "12px",
       height: "100%",
@@ -39,11 +40,11 @@ const Services = () => {
     },
     cardHover: {
       backgroundColor: "rgba(168, 255, 54, 1)",
-      color: "#000",
+      color: "#8d8d8d",
       boxShadow: "0 0 20px rgba(168, 255, 54, 0.6)",
     },
     subtitle: {
-      color: "#aaa",
+      color: "#8d8d8d",
     },
   };
 
@@ -64,8 +65,9 @@ const Services = () => {
               To Life— <br />
               <span style={{ color: "rgba(168, 255, 54, 1)" }}>Simple</span>
             </h2>
-            <p style={styles.subtitle}>
-              I offer creative support in areas where you need it most—
+            <p style={{ ...styles.subtitle, fontSize: "1.2rem" }}>
+              I offer creative support in areas where you need it most <br/>
+              —
               whether it's design.
             </p>
           </div>
@@ -85,7 +87,9 @@ const Services = () => {
                     }
                   >
                     <h5 className="fw-bold">{service.title}</h5>
-                    <p style={{ fontSize: "0.9rem" }}>{service.desc}</p>
+                     <p style={{ fontSize: "0.9rem", color: "#8d8d8d" }}>
+    {service.desc}
+  </p>
                   </div>
                 </div>
               ))}

@@ -25,8 +25,9 @@ const ContactSection = () => {
                 Let’s Connect.
               </span>
             </h2>
-            <p style={{ color: "#aaa", fontSize: "1.2rem" }}>
-              Whether it's designing a sleek user interface or writing code
+            <p style={{ color: "#aaa", fontSize: "1.5rem" }}>
+              Whether it's designing a sleek user interface or <br />
+              writing code
             </p>
           </div>
 

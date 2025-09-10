@@ -4,7 +4,16 @@ const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg fixed-top">
       <div className="container">
-        <a className="navbar-brand text-white" href="#home">BEEMABIM</a>
+        {/* Logo */}
+        <a className="navbar-brand" href="#home">
+          <img
+            src="/logo.png"
+            alt="Logo"
+            style={{ height: "20px", width: "auto" }} // logo lebih kecil
+          />
+        </a>
+
+        {/* Toggle Button */}
         <button
           className="navbar-toggler"
           type="button"
@@ -16,14 +25,31 @@ const Navbar = () => {
         >
           <span className="navbar-toggler-icon text-white"></span>
         </button>
-        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+        {/* Menu */}
+        <div
+          className="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
           <ul className="navbar-nav">
-            <li className="nav-item"><a className="nav-link" href="#home">Home</a></li>
-            <li className="nav-item"><a className="nav-link" href="#about">About Us</a></li>
-            <li className="nav-item"><a className="nav-link" href="#services">Services</a></li>
-            <li className="nav-item"><a className="nav-link" href="#projects">Projects</a></li>
-            <li className="nav-item"><a className="nav-link" href="#faq">FAQ</a></li>
-            <li className="nav-item"><a className="nav-link" href="#contact">Contact</a></li>
+            <li className="nav-item">
+              <a className="nav-link fw-bold" href="#home">Home</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link fw-bold" href="#about">About Us</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link fw-bold" href="#services">Services</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link fw-bold" href="#projects">Projects</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link fw-bold" href="#faq">FAQ</a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link fw-bold" href="#contact">Contact</a>
+            </li>
           </ul>
         </div>
       </div>

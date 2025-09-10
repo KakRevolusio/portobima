@@ -11,14 +11,15 @@ const About = () => {
           {/* Kolom kiri */}
           <div className="col-md-5 mb-4 mb-md-0">
             <h2 className="about-title">
-              From Concept To Execution,{" "}
+              From Concept To {" "}
               <i
                 className="bi bi-stars"
                 style={{ color: "rgba(168, 255, 54, 1)" }}
               ></i>
               <br />
-              I Help You Bring Your Dreams To Life
-              <br />
+              Execution, I Help You <br />
+              Bring Your Dreams To Life
+              
               With <span>Modern Designs.</span>
             </h2>
 
@@ -33,7 +34,7 @@ const About = () => {
 
           {/* Kolom kanan */}
           <div className="col-md-7">
-            <p>
+            <p className="textcolor">
               Hello, I’m Bima, a{" "}
               <span className="highlight">Digital Creative</span> specializing
               in <span className="highlight">UI/UX Design and Graphic Design</span>, 

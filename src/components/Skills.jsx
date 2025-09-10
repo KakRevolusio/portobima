@@ -47,7 +47,7 @@ const FAQ = () => {
     >
       <div className="container">
         {/* Header */}
-        <div className="row mb-5">
+        <div className="row mb-6">
           <div className="col-md-6">
             <h2 className="fw-bold">
               Got <span style={{ color: "rgba(168, 255, 54, 1)" }}>Questions?</span>
@@ -55,8 +55,8 @@ const FAQ = () => {
             </h2>
           </div>
           <div className="col-md-6 text-end d-flex align-items-center">
-            <p style={{ color: "#aaa" }}>
-              Everything you need to know about our logistics services — fast,
+            <p style={{ color: "#8d8d8d",fontSize: "1.2rem" }}>
+              Everything you need to know about our logistics  services — fast,
               simple, and transparent.
             </p>
           </div>
@@ -82,7 +82,7 @@ const FAQ = () => {
                       openIndex === index
                         ? "rgba(168, 255, 54, 1)"
                         : "rgba(40, 40, 40, 1)",
-                    color: openIndex === index ? "#000" : "#fff",
+                    color: openIndex === index ? "#000" : "#8d8d8d",
                     borderRadius: "25px",
                   }}
                 >
@@ -95,7 +95,7 @@ const FAQ = () => {
             {openIndex === index && (
               <div className="row mt-3">
                 <div className="col-md-10">
-                  <p style={{ fontSize: "0.9rem", color: "#bbb" }}>
+                  <p style={{ fontSize: "0.9rem", color: "#8d8d8d" }}>
                     {faq.answer}
                   </p>
                 </div>
