@@ -41,7 +41,8 @@ const FAQ = () => {
   };
 
   return (
-    <section id="faq"
+    <section
+      id="faq"
       className="faq-section py-5"
       style={{ backgroundColor: "rgba(21, 21, 21, 1)", color: "#fff" }}
     >
@@ -49,14 +50,14 @@ const FAQ = () => {
         {/* Header */}
         <div className="row mb-6">
           <div className="col-md-6">
-            <h2 className="fw-bold">
+            <h2 className="fw-bold" style={{ fontSize: "2.5rem" }}>
               Got <span style={{ color: "rgba(168, 255, 54, 1)" }}>Questions?</span>
               <br /> We’ve Got Answers.
             </h2>
           </div>
           <div className="col-md-6 text-end d-flex align-items-center">
-            <p style={{ color: "#8d8d8d",fontSize: "1.2rem" }}>
-              Everything you need to know about our logistics  services — fast,
+            <p style={{ color: "#8d8d8d", fontSize: "1.3rem" }}>
+              Everything you need to know about our logistics services — fast,
               simple, and transparent.
             </p>
           </div>
@@ -68,10 +69,15 @@ const FAQ = () => {
             key={faq.id}
             className="faq-item py-4 border-bottom border-secondary"
           >
-            {/* Row utama */}
+            {/* Pertanyaan */}
             <div className="row align-items-start">
               <div className="col-md-10">
-                <p className="mb-0 fw-medium">{faq.question}</p>
+                <p
+                  className="mb-0 fw-medium"
+                  style={{ fontSize: "1.2rem", color: "#fff" }}
+                >
+                  {faq.question}
+                </p>
               </div>
               <div className="col-md-2 text-end">
                 <button
@@ -91,11 +97,11 @@ const FAQ = () => {
               </div>
             </div>
 
-            {/* Dropdown jawaban */}
+            {/* Jawaban */}
             {openIndex === index && (
               <div className="row mt-3">
                 <div className="col-md-10">
-                  <p style={{ fontSize: "0.9rem", color: "#8d8d8d" }}>
+                  <p style={{ fontSize: "1.05rem", color: "#aaa", lineHeight: "1.7" }}>
                     {faq.answer}
                   </p>
                 </div>

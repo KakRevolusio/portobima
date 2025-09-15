@@ -46,20 +46,20 @@ const Experience = () => {
         {/* Header */}
         <div className="row mb-5">
           <div className="col-md-6">
-           <p
-  style={{
-    color: "#8d8d8d",
-    fontSize: "1.5rem",
-  }}
->
+            <p
+              style={{
+                color: "#8d8d8d",
+                fontSize: "1.5rem",
+                textAlign: "justify"
+              }}
+            >
               Whether it's designing a sleek user interface or
-              <br /> writing code that
-              brings it to life,
+              <br /> writing code that brings it to life,
             </p>
           </div>
           <div className="col-md-6 text-end">
-            <h2 className="fw-bold">
-              A Yearly Snapshot Of My{" "}
+            <h2 className="fw-bold" style={{ fontSize: "2.2rem" }}>
+              A Yearly Snapshot Of My
               <br />
               <span style={{ color: "rgba(168, 255, 54, 1)" }}>
                 Creative Growth
@@ -78,32 +78,50 @@ const Experience = () => {
             <div className="row align-items-start">
               {/* Kolom 1: Number + Position */}
               <div className="col-md-4 d-flex align-items-start">
-                <h2 className="fw-bold me-3 mb-0">
-                  {String(exp.id).padStart(2, "0")}
-                </h2>
+                <h2 className="fw-bold me-3 mb-0">{String(exp.id).padStart(2, "0")}</h2>
                 <div>
                   <small style={{ color: "#aaa" }}>Position</small>
-                  <p className="mb-0">{exp.position}</p>
+                  <p
+                    className="mb-0"
+                    style={{ fontSize: "1.1rem", textAlign: "justify" }}
+                  >
+                    {exp.position}
+                  </p>
                 </div>
               </div>
 
               {/* Kolom 2: Location */}
               <div className="col-md-2">
                 <small style={{ color: "#aaa" }}>Location Work</small>
-                <p className="mb-0">{exp.location}</p>
+                <p
+                  className="mb-0"
+                  style={{ fontSize: "1.05rem", textAlign: "justify" }}
+                >
+                  {exp.location}
+                </p>
               </div>
 
               {/* Kolom 3: Status */}
               <div className="col-md-2">
                 <small style={{ color: "#aaa" }}>Work status</small>
-                <p className="mb-0">{exp.status}</p>
+                <p
+                  className="mb-0"
+                  style={{ fontSize: "1.05rem", textAlign: "justify" }}
+                >
+                  {exp.status}
+                </p>
               </div>
 
               {/* Kolom 4: Duration + Button */}
               <div className="col-md-3 d-flex justify-content-between align-items-start">
                 <div>
                   <small style={{ color: "#aaa" }}>Duration</small>
-                  <p className="mb-0">{exp.duration}</p>
+                  <p
+                    className="mb-0"
+                    style={{ fontSize: "1.05rem", textAlign: "justify" }}
+                  >
+                    {exp.duration}
+                  </p>
                 </div>
                 <button
                   onClick={() => toggleDropdown(index)}
@@ -114,7 +132,7 @@ const Experience = () => {
                         ? "rgba(168, 255, 54, 1)"
                         : "rgba(40, 40, 40, 1)",
                     color: openIndex === index ? "#000" : "#8d8d8d",
-                    borderRadius: "25px",
+                    borderRadius: "25px"
                   }}
                 >
                   {openIndex === index ? "Hide ▲" : "Show ▼"}
@@ -122,19 +140,23 @@ const Experience = () => {
               </div>
             </div>
 
-            {/* Dropdown Baris Baru */}
-           {/* Dropdown Baris Baru */}
-{openIndex === index && (
-  <div className="row mt-3">
-    <div className="col-md-8 offset-md-4">
-      <small style={{ color: "#aaa" }}>Job Description</small>
-      <p style={{ fontSize: "0.9rem", color: "#bbb" }}>
-        {exp.description}
-      </p>
-    </div>
-  </div>
-)}
-
+            {/* Dropdown Deskripsi */}
+            {openIndex === index && (
+              <div className="row mt-3">
+                <div className="col-md-8 offset-md-4">
+                  <small style={{ color: "#aaa" }}>Job Description</small>
+                  <p
+                    style={{
+                      fontSize: "1.05rem",
+                      color: "#bbb",
+                      textAlign: "justify"
+                    }}
+                  >
+                    {exp.description}
+                  </p>
+                </div>
+              </div>
+            )}
           </div>
         ))}
       </div>

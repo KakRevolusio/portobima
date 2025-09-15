@@ -1,64 +1,41 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import projects from "../data/data";
 
-const Project = () => {
-  // Data JSON project (lebih banyak, total 27)
-  const projects = [
-    // UI/UX Design
-    { id: 1, title: "Portfolio Design Page", desc: "Design portfolio modern dengan layout interaktif.", category: "UI/UX Design", image: "/Container1.png" },
-    { id: 2, title: "Landing Page Bfree.ai", desc: "Landing page clean dengan fokus pada CTA.", category: "UI/UX Design", image: "/Container1.png" },
-    { id: 3, title: "Mobile App Dashboard", desc: "UI mobile untuk aplikasi finansial.", category: "UI/UX Design", image: "/Container1.png" },
-    { id: 4, title: "E-commerce Web Design", desc: "Desain e-commerce responsif.", category: "UI/UX Design", image: "/Container1.png" },
-    { id: 5, title: "Booking Platform UI", desc: "Platform pemesanan dengan UX friendly.", category: "UI/UX Design", image: "/Container1.png" },
-    { id: 6, title: "Learning App UI", desc: "UI aplikasi e-learning modern.", category: "UI/UX Design", image: "/Container1.png" },
-    { id: 7, title: "Dashboard Admin Panel", desc: "UI clean untuk admin panel.", category: "UI/UX Design", image: "/Container1.png" },
-    { id: 8, title: "Travel App UI", desc: "UI mobile untuk aplikasi travel.", category: "UI/UX Design", image: "/Container1.png" },
-    { id: 9, title: "Healthcare App UI", desc: "UI aplikasi kesehatan responsif.", category: "UI/UX Design", image: "/Container1.png" },
-    { id: 10, title: "Finance App UI", desc: "Desain mobile app untuk finansial.", category: "UI/UX Design", image: "/Container1.png" },
+const categories = ["UI/UX Design", "Social Media Design", "Graphic Design"];
 
-    // Social Media Design
-    { id: 11, title: "Instagram Campaign", desc: "Feed Instagram interaktif untuk branding.", category: "Social Media Design", image: "/Container1.png" },
-    { id: 12, title: "Facebook Ads", desc: "Desain iklan Facebook yang engaging.", category: "Social Media Design", image: "/Container1.png" },
-    { id: 13, title: "TikTok Promo", desc: "Visual promosi untuk kampanye TikTok.", category: "Social Media Design", image: "/Container1.png" },
-    { id: 14, title: "YouTube Thumbnail Pack", desc: "Thumbnail menarik untuk channel edukasi.", category: "Social Media Design", image: "/Container1.png" },
-    { id: 15, title: "Twitter Banner", desc: "Banner branding untuk akun Twitter.", category: "Social Media Design", image: "/Container1.png" },
-    { id: 16, title: "LinkedIn Post Design", desc: "Konten profesional untuk LinkedIn.", category: "Social Media Design", image: "/Container1.png" },
-    { id: 17, title: "Pinterest Board Design", desc: "Desain pin kreatif untuk Pinterest.", category: "Social Media Design", image: "/Container1.png" },
-    { id: 18, title: "Snapchat Story Design", desc: "Story visual untuk Snapchat campaign.", category: "Social Media Design", image: "/Container1.png" },
-    { id: 19, title: "Social Media Kit", desc: "Paket desain media sosial lengkap.", category: "Social Media Design", image: "/Container1.png" },
-
-    // Graphic Design
-    { id: 20, title: "Poster Event", desc: "Desain poster untuk acara kampus.", category: "Graphic Design", image: "/Container1.png" },
-    { id: 21, title: "Branding Kit", desc: "Paket branding lengkap untuk startup.", category: "Graphic Design", image: "/Container1.png" },
-    { id: 22, title: "Packaging Design", desc: "Desain kemasan produk modern.", category: "Graphic Design", image: "/Container1.png" },
-    { id: 23, title: "Flyer Cafe", desc: "Flyer promo untuk cafe baru.", category: "Graphic Design", image: "/Container1.png" },
-    { id: 24, title: "Illustration Artwork", desc: "Ilustrasi vektor untuk kampanye digital.", category: "Graphic Design", image: "/Container1.png" },
-    { id: 25, title: "Company Profile", desc: "Desain company profile elegan.", category: "Graphic Design", image: "/Container1.png" },
-    { id: 26, title: "Business Card Design", desc: "Kartu nama profesional.", category: "Graphic Design", image: "/Container1.png" },
-    { id: 27, title: "Logo Design Pack", desc: "Paket desain logo modern.", category: "Graphic Design", image: "/Container1.png" },
-  ];
-   const categories = ["UI/UX Design", "Social Media Design", "Graphic Design"];
+const Projects = () => {
   const [activeCategory, setActiveCategory] = useState("UI/UX Design");
   const [currentPage, setCurrentPage] = useState(1);
+  const navigate = useNavigate();
+
   const itemsPerPage = 9;
-
-  const filteredProjects = projects.filter((p) => p.category === activeCategory);
+  const filteredProjects = projects.filter(
+    (project) => project.category === activeCategory
+  );
   const totalPages = Math.ceil(filteredProjects.length / itemsPerPage);
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentProjects = filteredProjects.slice(indexOfFirstItem, indexOfLastItem);
-
-  const handlePrev = () => currentPage > 1 && setCurrentPage(currentPage - 1);
-  const handleNext = () => currentPage < totalPages && setCurrentPage(currentPage + 1);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const currentProjects = filteredProjects.slice(
+    startIndex,
+    startIndex + itemsPerPage
+  );
 
   return (
     <section
       id="projects"
-      style={{ backgroundColor: "rgba(21, 21, 21, 1)", color: "#fff", padding: "60px 0" }}
+      style={{
+        backgroundColor: "rgba(21, 21, 21, 1)",
+        color: "#fff",
+        padding: "60px 0",
+      }}
     >
       <div className="container text-center">
         <h2 className="fw-bold mb-3" style={{ fontSize: "2.5rem" }}>
-          Explore <span style={{ color: "rgba(168, 255, 54, 1)" }}>My Expert Portfolio</span> Of
-          <br /> Creative Solutions
+          Explore{" "}
+          <span style={{ color: "rgba(168, 255, 54, 1)" }}>
+            My Expert Portfolio
+          </span>{" "}
+          Of <br /> Creative Solutions
         </h2>
         <p style={{ color: "#aaa" }}>
           Whether it's designing a sleek user interface or writing code
@@ -71,7 +48,10 @@ const Project = () => {
               key={idx}
               className="filter-btn"
               style={{
-                backgroundColor: activeCategory === cat ? "rgba(168, 255, 54, 1)" : "rgba(40, 40, 40, 1)",
+                backgroundColor:
+                  activeCategory === cat
+                    ? "rgba(168, 255, 54, 1)"
+                    : "rgba(40, 40, 40, 1)",
                 color: activeCategory === cat ? "#000" : "#fff",
                 border: "none",
                 borderRadius: "20px",
@@ -104,11 +84,16 @@ const Project = () => {
                   cursor: "pointer",
                   transition: "transform 0.3s ease",
                 }}
+                onClick={() => navigate(`/projects/${project.id}`)} // klik card ke detail
               >
                 <img
                   src={project.image}
                   alt={project.title}
-                  style={{ width: "100%", height: "250px", objectFit: "cover" }}
+                  style={{
+                    width: "100%",
+                    height: "250px",
+                    objectFit: "cover",
+                  }}
                 />
                 <div
                   className="overlay-text"
@@ -118,9 +103,10 @@ const Project = () => {
                     left: "0",
                     right: "0",
                     padding: "20px",
-                    background: "linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))",
+                    background:
+                      "linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))",
                     color: "#fff",
-                    textAlign: "left", // rata kiri
+                    textAlign: "left",
                     transition: "all 0.4s ease",
                   }}
                 >
@@ -132,10 +118,10 @@ const Project = () => {
           ))}
         </div>
 
-        {/* Pagination dengan Next / Prev */}
+        {/* Pagination */}
         <div className="d-flex justify-content-center gap-2 mt-4 flex-wrap">
           <button
-            onClick={handlePrev}
+            onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
             disabled={currentPage === 1}
             style={{
               backgroundColor: "rgba(40, 40, 40, 1)",
@@ -154,7 +140,10 @@ const Project = () => {
               key={i}
               onClick={() => setCurrentPage(i + 1)}
               style={{
-                backgroundColor: currentPage === i + 1 ? "rgba(168, 255, 54, 1)" : "rgba(40, 40, 40, 1)",
+                backgroundColor:
+                  currentPage === i + 1
+                    ? "rgba(168, 255, 54, 1)"
+                    : "rgba(40, 40, 40, 1)",
                 color: currentPage === i + 1 ? "#000" : "#fff",
                 border: "none",
                 borderRadius: "5px",
@@ -167,7 +156,7 @@ const Project = () => {
           ))}
 
           <button
-            onClick={handleNext}
+            onClick={() => setCurrentPage((p) => Math.min(p + 1, totalPages))}
             disabled={currentPage === totalPages}
             style={{
               backgroundColor: "rgba(40, 40, 40, 1)",
@@ -185,12 +174,10 @@ const Project = () => {
 
       <style>{`
         .project-card:hover { transform: translateY(-5px); }
-        .project-card:hover .overlay-text { 
-          transform: translateY(-10px); /* tulisan naik */
-        }
+        .project-card:hover .overlay-text { transform: translateY(-10px); }
       `}</style>
     </section>
   );
 };
 
-export default Project;
+export default Projects;
