@@ -85,26 +85,7 @@ const About = () => {
             }}
             onClick={(e) => e.stopPropagation()}
           >
-            {/* Tombol Close di pojok kanan */}
-            <button
-              onClick={() => setShowModal(false)}
-              style={{
-                position: "absolute",
-                top: "15px",
-                right: "15px",
-                backgroundColor: "red",
-                color: "#fff",
-                border: "none",
-                borderRadius: "50%",
-                width: "40px",
-                height: "40px",
-                fontSize: "18px",
-                fontWeight: "bold",
-                cursor: "pointer",
-              }}
-            >
-              ×
-            </button>
+           
 
             {/* iframe CV */}
             <iframe
