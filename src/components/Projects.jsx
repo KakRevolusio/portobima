@@ -31,7 +31,7 @@ const Projects = () => {
     >
       <div className="container text-center">
         {/* Header */}
-        <h2 className="fw-bold mb-3" style={{ fontSize: "2.5rem" }}>
+        <h2 className="fw-bold mb-3" style={{ fontSize: "2rem" }}>
           Explore{" "}
           <span style={{ color: "rgba(168, 255, 54, 1)" }}>
             My Expert Portfolio
@@ -41,7 +41,7 @@ const Projects = () => {
         <p
           style={{
             color: "#aaa",
-            fontSize: "1.2rem", // ✅ disamakan dengan Services
+            fontSize: "1rem",
             lineHeight: "1.6",
           }}
         >
@@ -62,11 +62,10 @@ const Projects = () => {
                 color: activeCategory === cat ? "#000" : "#fff",
                 border: "none",
                 borderRadius: "20px",
-                padding: "12px 24px",
+                padding: "10px 20px",
                 fontWeight: "700",
-                fontSize: "1rem",
+                fontSize: "0.95rem",
                 cursor: "pointer",
-                transition: "all 0.3s ease",
               }}
               onClick={() => {
                 setActiveCategory(cat);
@@ -90,19 +89,29 @@ const Projects = () => {
                   overflow: "hidden",
                   backgroundColor: "#111",
                   cursor: "pointer",
-                  transition: "transform 0.3s ease",
                 }}
                 onClick={() => navigate(`/projects/${project.id}`)}
               >
-                <img
-                  src={project.image}
-                  alt={project.title}
+                {/* Image 4:3 */}
+                <div
                   style={{
                     width: "100%",
-                    height: "250px",
-                    objectFit: "cover",
+                    aspectRatio: "4 / 3", // ✅ biar rasio 4:3
+                    overflow: "hidden",
                   }}
-                />
+                >
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
+
+                {/* Overlay Text */}
                 <div
                   className="overlay-text"
                   style={{
@@ -110,23 +119,33 @@ const Projects = () => {
                     bottom: "0",
                     left: "0",
                     right: "0",
-                    padding: "20px",
+                    padding: "15px",
                     background:
                       "linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0))",
                     color: "#fff",
                     textAlign: "left",
-                    transition: "all 0.4s ease",
                   }}
                 >
-                  <h5>{project.title}</h5>
+                  <h5
+                    style={{
+                      fontSize: "1rem",
+                      marginBottom: "5px",
+                      whiteSpace: "nowrap", // ✅ 1 baris saja
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                    }}
+                  >
+                    {project.title}
+                  </h5>
                   <p
                     style={{
-                      fontSize: "0.9rem",
+                      fontSize: "0.85rem",
                       display: "-webkit-box",
                       WebkitLineClamp: 2,
                       WebkitBoxOrient: "vertical",
                       overflow: "hidden",
                       textOverflow: "ellipsis",
+                      margin: 0,
                     }}
                   >
                     {project.desc}
@@ -147,8 +166,8 @@ const Projects = () => {
               color: "#fff",
               border: "none",
               borderRadius: "8px",
-              padding: "12px 20px",
-              fontSize: "1rem",
+              padding: "10px 18px",
+              fontSize: "0.95rem",
               minWidth: "80px",
               cursor: currentPage === 1 ? "not-allowed" : "pointer",
             }}
@@ -168,8 +187,8 @@ const Projects = () => {
                 color: currentPage === i + 1 ? "#000" : "#fff",
                 border: "none",
                 borderRadius: "8px",
-                padding: "12px 20px",
-                fontSize: "1rem",
+                padding: "10px 18px",
+                fontSize: "0.95rem",
                 minWidth: "50px",
                 cursor: "pointer",
               }}
@@ -186,8 +205,8 @@ const Projects = () => {
               color: "#fff",
               border: "none",
               borderRadius: "8px",
-              padding: "12px 20px",
-              fontSize: "1rem",
+              padding: "10px 18px",
+              fontSize: "0.95rem",
               minWidth: "80px",
               cursor: currentPage === totalPages ? "not-allowed" : "pointer",
             }}
@@ -196,11 +215,6 @@ const Projects = () => {
           </button>
         </div>
       </div>
-
-      <style>{`
-        .project-card:hover { transform: translateY(-5px); }
-        .project-card:hover .overlay-text { transform: translateY(-10px); }
-      `}</style>
     </section>
   );
 };
