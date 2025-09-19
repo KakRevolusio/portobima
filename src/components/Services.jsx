@@ -1,4 +1,3 @@
-import React from "react";
 
 const Services = () => {
   const services = [
@@ -20,7 +19,6 @@ const Services = () => {
     },
   ];
 
-  // style dasar
   const styles = {
     section: {
       backgroundColor: "rgba(21, 21, 21, 1)",
@@ -30,7 +28,6 @@ const Services = () => {
     card: {
       backgroundColor: "rgba(40, 40, 40, 1)",
       color: "#fff",
-  
       padding: "20px",
       borderRadius: "12px",
       height: "100%",
@@ -40,20 +37,24 @@ const Services = () => {
     },
     cardHover: {
       backgroundColor: "rgba(168, 255, 54, 1)",
-      color: "#8d8d8d",
+      color: "#000",
       boxShadow: "0 0 20px rgba(168, 255, 54, 0.6)",
     },
     subtitle: {
       color: "#8d8d8d",
+      fontSize: "0.9rem",
+      transition: "color 0.3s ease",
+    },
+    subtitleHover: {
+      color: "#000",
     },
   };
 
   return (
     <section style={styles.section} id="services">
       <div className="container">
-        {/* GANTI align-items-center -> align-items-start */}
         <div className="row align-items-start">
-          {/* Kolom kiri - teks */}
+          {/* Kolom kiri */}
           <div className="col-md-6 mb-4">
             <h2 className="fw-bold mb-3">
               Here’s What <br />
@@ -66,8 +67,7 @@ const Services = () => {
               <span style={{ color: "rgba(168, 255, 54, 1)" }}>Simple</span>
             </h2>
             <p style={{ ...styles.subtitle, fontSize: "1.2rem" }}>
-              I offer creative support in areas where you need it most <br/>
-              —
+              I offer creative support in areas where you need it most <br />—
               whether it's design.
             </p>
           </div>
@@ -78,18 +78,21 @@ const Services = () => {
               {services.map((service, idx) => (
                 <div className="col-md-6" key={idx}>
                   <div
+                    className="service-card"
                     style={styles.card}
-                    onMouseEnter={(e) =>
-                      Object.assign(e.currentTarget.style, styles.cardHover)
-                    }
-                    onMouseLeave={(e) =>
-                      Object.assign(e.currentTarget.style, styles.card)
-                    }
+                    onMouseEnter={(e) => {
+                      Object.assign(e.currentTarget.style, styles.cardHover);
+                      const p = e.currentTarget.querySelector("p");
+                      if (p) Object.assign(p.style, styles.subtitleHover);
+                    }}
+                    onMouseLeave={(e) => {
+                      Object.assign(e.currentTarget.style, styles.card);
+                      const p = e.currentTarget.querySelector("p");
+                      if (p) Object.assign(p.style, styles.subtitle);
+                    }}
                   >
                     <h5 className="fw-bold">{service.title}</h5>
-                     <p style={{ fontSize: "0.9rem", color: "#8d8d8d" }}>
-    {service.desc}
-  </p>
+                    <p style={styles.subtitle}>{service.desc}</p>
                   </div>
                 </div>
               ))}

@@ -11,7 +11,7 @@ const Experience = () => {
       status: "Internship",
       duration: "6 months",
       description:
-        "My responsibilities include developing wireframes, mockups, and interactive prototypes in accordance with brand guidelines and visual identity standards. I also conduct comprehensive user research to gather valuable insights and execute usability testing through Maze to guarantee that the final product provides users with an exceptional experience."
+        "My responsibilities include developing wireframes, mockups, and interactive prototypes in accordance with brand guidelines and visual identity standards. I also conduct comprehensive user research to gather valuable insights and execute usability testing through Maze to guarantee that the final product provides users with an exceptional experience.",
     },
     {
       id: 2,
@@ -20,7 +20,7 @@ const Experience = () => {
       status: "Internship",
       duration: "3 months",
       description:
-        "Involved in creating user interfaces and conducting usability testing to enhance user experience."
+        "Involved in creating user interfaces and conducting usability testing to enhance user experience.",
     },
     {
       id: 3,
@@ -29,8 +29,8 @@ const Experience = () => {
       status: "Internship",
       duration: "12 months",
       description:
-        "Responsible for visual design, brand identity, and supporting digital marketing campaigns with high-quality graphics."
-    }
+        "Responsible for visual design, brand identity, and supporting digital marketing campaigns with high-quality graphics.",
+    },
   ];
 
   const toggleDropdown = (index) => {
@@ -50,7 +50,7 @@ const Experience = () => {
               style={{
                 color: "#8d8d8d",
                 fontSize: "1.5rem",
-                textAlign: "justify"
+                textAlign: "justify",
               }}
             >
               Whether it's designing a sleek user interface or
@@ -78,7 +78,9 @@ const Experience = () => {
             <div className="row align-items-start">
               {/* Kolom 1: Number + Position */}
               <div className="col-md-4 d-flex align-items-start">
-                <h2 className="fw-bold me-3 mb-0">{String(exp.id).padStart(2, "0")}</h2>
+                <h2 className="fw-bold me-3 mb-0">
+                  {String(exp.id).padStart(2, "0")}
+                </h2>
                 <div>
                   <small style={{ color: "#aaa" }}>Position</small>
                   <p
@@ -113,7 +115,8 @@ const Experience = () => {
               </div>
 
               {/* Kolom 4: Duration + Button */}
-              <div className="col-md-3 d-flex justify-content-between align-items-start">
+              <div className="col-md-4 d-flex justify-content-between align-items-start">
+                {/* Bagian kiri: Duration */}
                 <div>
                   <small style={{ color: "#aaa" }}>Duration</small>
                   <p
@@ -123,20 +126,24 @@ const Experience = () => {
                     {exp.duration}
                   </p>
                 </div>
-                <button
-                  onClick={() => toggleDropdown(index)}
-                  className="btn fw-bold px-4 py-2"
-                  style={{
-                    backgroundColor:
-                      openIndex === index
-                        ? "rgba(168, 255, 54, 1)"
-                        : "rgba(40, 40, 40, 1)",
-                    color: openIndex === index ? "#000" : "#8d8d8d",
-                    borderRadius: "25px"
-                  }}
-                >
-                  {openIndex === index ? "Hide ▲" : "Show ▼"}
-                </button>
+
+                {/* Bagian kanan: Tombol */}
+                <div className="ms-auto">
+                  <button
+                    onClick={() => toggleDropdown(index)}
+                    className="btn fw-bold px-4 py-2"
+                    style={{
+                      backgroundColor:
+                        openIndex === index
+                          ? "rgba(168, 255, 54, 1)"
+                          : "rgba(40, 40, 40, 1)",
+                      color: openIndex === index ? "#000" : "#8d8d8d",
+                      borderRadius: "25px",
+                    }}
+                  >
+                    {openIndex === index ? "Hide ▲" : "Show ▼"}
+                  </button>
+                </div>
               </div>
             </div>
 
@@ -149,7 +156,7 @@ const Experience = () => {
                     style={{
                       fontSize: "1.05rem",
                       color: "#bbb",
-                      textAlign: "justify"
+                      textAlign: "justify",
                     }}
                   >
                     {exp.description}

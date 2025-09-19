@@ -30,6 +30,7 @@ const Projects = () => {
       }}
     >
       <div className="container text-center">
+        {/* Header */}
         <h2 className="fw-bold mb-3" style={{ fontSize: "2.5rem" }}>
           Explore{" "}
           <span style={{ color: "rgba(168, 255, 54, 1)" }}>
@@ -37,7 +38,13 @@ const Projects = () => {
           </span>{" "}
           Of <br /> Creative Solutions
         </h2>
-        <p style={{ color: "#aaa" }}>
+        <p
+          style={{
+            color: "#aaa",
+            fontSize: "1.2rem", // ✅ disamakan dengan Services
+            lineHeight: "1.6",
+          }}
+        >
           Whether it's designing a sleek user interface or writing code
         </p>
 
@@ -55,8 +62,9 @@ const Projects = () => {
                 color: activeCategory === cat ? "#000" : "#fff",
                 border: "none",
                 borderRadius: "20px",
-                padding: "10px 20px",
-                fontWeight: "500",
+                padding: "12px 24px",
+                fontWeight: "700",
+                fontSize: "1rem",
                 cursor: "pointer",
                 transition: "all 0.3s ease",
               }}
@@ -84,7 +92,7 @@ const Projects = () => {
                   cursor: "pointer",
                   transition: "transform 0.3s ease",
                 }}
-                onClick={() => navigate(`/projects/${project.id}`)} // klik card ke detail
+                onClick={() => navigate(`/projects/${project.id}`)}
               >
                 <img
                   src={project.image}
@@ -111,7 +119,18 @@ const Projects = () => {
                   }}
                 >
                   <h5>{project.title}</h5>
-                  <p style={{ fontSize: "0.9rem" }}>{project.desc}</p>
+                  <p
+                    style={{
+                      fontSize: "0.9rem",
+                      display: "-webkit-box",
+                      WebkitLineClamp: 2,
+                      WebkitBoxOrient: "vertical",
+                      overflow: "hidden",
+                      textOverflow: "ellipsis",
+                    }}
+                  >
+                    {project.desc}
+                  </p>
                 </div>
               </div>
             </div>
@@ -119,7 +138,7 @@ const Projects = () => {
         </div>
 
         {/* Pagination */}
-        <div className="d-flex justify-content-center gap-2 mt-4 flex-wrap">
+        <div className="d-flex justify-content-center gap-3 mt-5 mb-5 flex-wrap">
           <button
             onClick={() => setCurrentPage((p) => Math.max(p - 1, 1))}
             disabled={currentPage === 1}
@@ -127,8 +146,10 @@ const Projects = () => {
               backgroundColor: "rgba(40, 40, 40, 1)",
               color: "#fff",
               border: "none",
-              borderRadius: "5px",
-              padding: "5px 12px",
+              borderRadius: "8px",
+              padding: "12px 20px",
+              fontSize: "1rem",
+              minWidth: "80px",
               cursor: currentPage === 1 ? "not-allowed" : "pointer",
             }}
           >
@@ -146,8 +167,10 @@ const Projects = () => {
                     : "rgba(40, 40, 40, 1)",
                 color: currentPage === i + 1 ? "#000" : "#fff",
                 border: "none",
-                borderRadius: "5px",
-                padding: "5px 12px",
+                borderRadius: "8px",
+                padding: "12px 20px",
+                fontSize: "1rem",
+                minWidth: "50px",
                 cursor: "pointer",
               }}
             >
@@ -162,8 +185,10 @@ const Projects = () => {
               backgroundColor: "rgba(40, 40, 40, 1)",
               color: "#fff",
               border: "none",
-              borderRadius: "5px",
-              padding: "5px 12px",
+              borderRadius: "8px",
+              padding: "12px 20px",
+              fontSize: "1rem",
+              minWidth: "80px",
               cursor: currentPage === totalPages ? "not-allowed" : "pointer",
             }}
           >
