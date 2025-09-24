@@ -7,6 +7,7 @@ const projects = [
     desc: "Here’s one of my recent UI/UX design explorations, the responsive landing page for Bfree.ai, designed to deliver a seamless experience across desktop and mobile devices. The challenge was to create a modern and adaptive interface that highlights the platform’s core values, showcases its services, and builds user trust while ensuring consistency, clarity, and smooth navigation on any screen size. The main focus of this design is responsiveness, accessibility, and engagement, allowing users to explore Bfree.ai effortlessly whether they’re browsing on desktop or mobile.",
     category: "UI/UX Design",
     image: "/uiux/ui1.png",
+    url: "https://dribbble.com/shots/26552253-Bfree-ai-Responsive-Landing-Page-Desktop-Mobile",
   },
   {
     id: 2,
@@ -14,6 +15,7 @@ const projects = [
     desc: "Here’s one of my recent UI/UX design explorations, a personal portfolio landing page built to showcase projects, skills, and professional experience in a clean and modern way. The challenge was to design a minimal yet impactful interface that highlights key works, career journey, and contact information while ensuring a smooth and engaging user journey for potential clients or recruiters. The main focus of this design is clarity, personal branding, and accessibility, allowing visitors to easily explore the portfolio, understand expertise, and connect through a seamless digital presence.",
     category: "UI/UX Design",
     image: "/uiux/ui2.png",
+     url: "https://dribbble.com/shots/26552187-Personal-Portfolio-Landing-Page-Design-Idea",
   },
   {
     id: 3,
@@ -21,6 +23,7 @@ const projects = [
     desc: "Here’s one of my recent UI/UX design explorations, the homepage for the Nogotirto Village Government Website.<br> The challenge was creating an accessible and informative experience for the community, with features like the latest announcements, public services, village event schedules, and other important information, all while maintaining a simple and intuitive interface.<br>The main focus of this design is ease of access, reliability, and a smooth user experience, so residents can easily access village information, participate in community activities, and utilize public services with confidence, all in one platform.",
     category: "UI/UX Design",
     image: "/uiux/ui3.png",
+     url: "https://dribbble.com/shots/26552179-Web-Profile-Design-Inspiration-Nogotirto-Village-Government",
   },
   {
     id: 4,
@@ -28,6 +31,7 @@ const projects = [
     desc: "Here’s one of my recent team internship projects, the development of Cendekia Publishing, a professional website that serves as a hub for international-scale journal articles, designed with a focus on accessibility, credibility, and ease of navigation through features like journal indexing, advanced search, article categories, and a user-friendly reading experience, aiming to promote knowledge-sharing, global reach, and reliability so researchers, academics, and students can easily discover, read, and reference scholarly works in one trusted platform.",
     category: "UI/UX Design",
     image: "/uiux/ui4.png",
+     url: "https://dribbble.com/shots/26552168-Cendekia-Publishing-International-Journal-Articles-Website",
   },
   {
     id: 5,
@@ -35,6 +39,7 @@ const projects = [
     desc: "Here’s one of my recent UI/UX design explorations, the mobile app design for Amikom Smart Service, a one-gate service platform by Amikom Yogyakarta, created to help students easily access and utilize campus services. <br> The challenge was to design an integrated and student-friendly platform, with features like academic information, course schedules, administration services, announcements, and digital campus facilities — all while keeping the interface simple, modern, and intuitive. <br> The main focus of this design is efficiency, accessibility, and reliability, so students can manage their academic activities, stay updated with campus information, and access services seamlessly in one app.",
     category: "UI/UX Design",
     image: "/uiux/ui5.png",
+     url: "https://dribbble.com/shots/26552158-Mobile-UI-for-Amikom-Smart-Service",
   },
   {
     id: 6,
@@ -42,6 +47,7 @@ const projects = [
     desc: "Here’s one of my recent UI/UX design explorations, a Crypto Integration page for the official HSBC website, designed to blend the elegant and trusted feel of traditional banking with the fast-paced, energetic world of crypto while focusing on simplicity, trust, and a smooth user experience so users can invest in crypto directly from the banking website without confusion or friction.",
     category: "UI/UX Design",
     image: "/uiux/ui6.png",
+     url: "https://dribbble.com/shots/26552153-HSBC-Crypto-Integration-Website",
   },
   {
     id: 7,
@@ -49,6 +55,7 @@ const projects = [
     desc: "This UI/UX design exploration focuses on making film streaming simple and enjoyable with clean navigation, fast loading, and efficient content discovery — allowing users to easily explore and watch Indonesian films without confusion or friction.",
     category: "UI/UX Design",
     image: "/uiux/ui7.png",
+     url: "https://dribbble.com/shots/26552146-Mobile-UI-Streaming-App-for-MovHub",
   },
   {
     id: 8,
@@ -56,6 +63,7 @@ const projects = [
     desc: "This project combines web design and branding for Festifun, a company that sells online event tickets and organizes events. We created a clean, modern, and trustworthy website that allows users to easily discover events, book tickets securely, and access event details, while also developing Festifun’s visual branding to build a consistent and professional identity across all platforms.",
     category: "UI/UX Design",
      image: "/uiux/ui8.png",
+      url: "https://dribbble.com/shots/26552104-Festifun-Web-Design-Branding-for-Event-Ticketing-Platform",
   },
   {
     id: 9,
@@ -63,6 +71,7 @@ const projects = [
     desc: "This UI/UX design exploration focuses on simplifying warehouse management with a clean and intuitive interface, real-time tracking, and efficient stock control — making it easy for managers to monitor and manage inventory without confusion or friction.",
     category: "UI/UX Design",
     image: "/uiux/ui9.png",
+     url: "https://dribbble.com/shots/26552089-Trackle-id-Warehouse-Management-System-App",
   },
   {
     id: 10,
@@ -70,6 +79,7 @@ const projects = [
     desc: "At ToureaseID, we make traveling easier and more enjoyable. Whether you're planning a weekend getaway or a dream vacation, our app offers everything you need to make your journey seamless. From booking flights and hotels to discovering exciting destinations, ToureaseID is your go-to travel guide. Let us help you create unforgettable travel experiences with just a few taps.",
     category: "UI/UX Design",
    image: "/uiux/ui10.png",
+    url: "https://dribbble.com/shots/26552083-Mobile-UI-for-Traveling-App-TourEaseID",
   },
 {
     id: 11,
@@ -77,6 +87,7 @@ const projects = [
     desc: "At Amikom One, we've introduced a major update with the redesign of v2. With a fresher and more user-friendly interface, we’ve made it easier to access campus services and academic resources. Whether you're checking your grades, looking up class schedules, or connecting with the campus community, Amikom One v2 offers a smoother and more efficient experience to keep you organized and focused on your studies.",
     category: "UI/UX Design",
    image: "/uiux/ui11.png",
+    url: "https://dribbble.com/shots/26552074-Amokom-One-v2-Student-Tracking-Application",
   },
   {
     id: 12,
@@ -84,6 +95,7 @@ const projects = [
     desc: "At Shot Discovery, we’ve designed a calculator that adapts to your needs. With 2 Modes to choose from—Basic Mode for everyday calculations and Advanced Mode for more complex tasks—our app ensures that you’re always prepared for any number crunching. Whether you're doing simple math or solving equations, this app has got you covered. Simplify your calculations, maximize your productivity!",
     category: "UI/UX Design",
    image: "/uiux/ui12.png",
+    url: "https://dribbble.com/shots/26552065-Mobile-Calculator-App-2-Mode-Design-Inspiration",
   },
   {
     id: 13,
@@ -91,6 +103,7 @@ const projects = [
     desc: "At Shot Discover, we’ve designed the perfect travel companion to guide you through your next adventure. Whether you're exploring a new city or hiking a scenic trail, our app provides detailed maps, must-see attractions, local recommendations, and personalized itineraries to ensure you don’t miss out on anything. Travel smarter, explore deeper, and discover new places like never before.",
     category: "UI/UX Design",
    image: "/uiux/ui13.png",
+    url: "https://dribbble.com/shots/26552063-Travel-App-for-Tourist-Guide",
   },
   {
     id: 14,
@@ -98,6 +111,7 @@ const projects = [
     desc: "At Shot Discover, we bring you the latest and most exclusive collection of Nike shoes right at your fingertips. Whether you’re looking for performance-driven sneakers or stylish everyday wear, we’ve got the perfect pair for you. Shop with ease and discover the perfect fit for your lifestyle, all in one place. Get ready to step up your game with Nike shoes!",
     category: "UI/UX Design",
    image: "/uiux/ui14.png",
+    url: "https://dribbble.com/shots/26552042-Running-Shoes-Store-Mobile-App-for-Nike",
   },
   {
     id: 15,
@@ -105,6 +119,7 @@ const projects = [
     desc: "At Shot Discover, we bring the McDonald's experience directly to your door with our easy-to-use delivery app. Whether you're craving a Big Mac or fries, our app lets you order your favorite McDonald's meals with just a few taps. Fast, convenient, and delicious—get your cravings satisfied in no time. Download now and enjoy the ultimate McDelivery experience.",
     category: "UI/UX Design",
    image: "/uiux/ui15.png",
+    url: "https://dribbble.com/shots/26552038-Mobile-App-UI-for-McDonald-s-Delivery",
   },
   {
     id: 16,
@@ -112,6 +127,7 @@ const projects = [
     desc: "At User Trust, we understand the importance of keeping your personal data secure. Our platform offers cutting-edge solutions to protect your privacy, ensuring that your sensitive information remains safe from threats. Whether you're an individual or a business, we provide tailored services that safeguard your digital presence. Trust us to keep your data protected, so you can focus on what matters most.",
     category: "UI/UX Design",
    image: "/uiux/ui16.png",
+    url: "https://dribbble.com/shots/26552032-UserTrust-Landing-Page-Data-Protection-Website",
   },
   {
     id: 17,
@@ -119,6 +135,7 @@ const projects = [
     desc: "At Sehat Lansia, we believe that aging doesn’t mean losing control of your health. This app is designed specifically for seniors to help monitor their health—tracking everything from eating habits, rest schedules, to personalized fitness goals. With features like live chat for direct consultations with doctors, maps for finding nearby hospitals or clinics, and an emergency button for instant medical assistance, Sehat Lansia makes sure your golden years are safe, healthy, and fully supported.",
     category: "UI/UX Design",
    image: "/uiux/ui17.png",
+    url: "https://dribbble.com/shots/26548923-Sehat-Lansia-Smart-Health-Monitoring-App",
   },
   {
     id: 18,
@@ -126,6 +143,7 @@ const projects = [
     desc: "At Mental Care, we believe mental health is just as important as physical health. Our platform provides a safe, confidential space for young people struggling with mental health challenges. Whether you’re feeling overwhelmed, anxious, or just need someone to talk to, we’re here to guide you through it. Take the first step toward healing today. ",
     category: "UI/UX Design",
    image: "/uiux/ui18.png",
+    url: "https://dribbble.com/shots/26548879-Mental-Care-Your-Safe-Space-for-Mental-Health-Support",
   },
   // Social Media Design
   {
@@ -134,6 +152,7 @@ const projects = [
     desc: "",
     category: "Social Media Design",
     image: "/sm/sm1.png",
+     url: "",
   },
   {
     id: 12,
@@ -141,6 +160,7 @@ const projects = [
     desc: "",
     category: "Social Media Design",
     image: "/sm/sm2.png",
+     url: "",
   },
   {
     id: 13,
@@ -148,6 +168,7 @@ const projects = [
     desc: "",
     category: "Social Media Design",
     image: "/sm/sm3.png",
+     url: "",
   },
   {
     id: 14,
@@ -155,6 +176,7 @@ const projects = [
     desc: "",
     category: "Social Media Design",
     image: "/sm/sm4.png",
+     url: "",
   },
   {
     id: 15,
@@ -162,6 +184,7 @@ const projects = [
     desc: "",
     category: "Social Media Design",
     image: "/sm/sm5.png",
+     url: "",
   },
   // {
   //   id: 16,
@@ -199,6 +222,7 @@ const projects = [
     desc: "",
     category: "Graphic Design",
     image: "/gd/gd1.png",
+     url: "https://dribbble.com/shots/26553301-Festifun-Logo-Design",
   },
   {
     id: 21,
@@ -206,6 +230,7 @@ const projects = [
     desc: "",
     category: "Graphic Design",
     image: "/gd/gd2.png",
+     url: "https://dribbble.com/shots/26553301-Festifun-Logo-Design",
   },
   {
     id: 22,
@@ -213,6 +238,7 @@ const projects = [
     desc: "",
     category: "Graphic Design",
     image: "/gd/gd3.png",
+     url: "https://dribbble.com/shots/26553301-Festifun-Logo-Design",
   },
   {
     id: 23,
@@ -220,6 +246,7 @@ const projects = [
     desc: "",
     category: "Graphic Design",
     image: "/gd/gd4.png",
+     url: "",
   },
   {
     id: 24,
@@ -227,6 +254,7 @@ const projects = [
     desc: "",
     category: "Graphic Design",
     image: "/gd/gd5.png",
+     url: "",
   },
   {
     id: 25,
@@ -234,6 +262,7 @@ const projects = [
     desc: "",
     category: "Graphic Design",
    image: "/gd/gd6.png",
+    url: "",
   },
   {
     id: 26,
@@ -241,6 +270,7 @@ const projects = [
     desc: "",
     category: "Graphic Design",
     image: "/gd/gd7.png",
+     url: "",
   },
   {
     id: 27,
@@ -248,6 +278,7 @@ const projects = [
     desc: "",
     category: "Graphic Design",
    image: "/gd/gd8.png",
+    url: "",
   },
   {
     id: 28,
@@ -255,6 +286,7 @@ const projects = [
     desc: "",
     category: "Graphic Design",
    image: "/gd/gd9.png",
+    url: "",
   },
 ];
 

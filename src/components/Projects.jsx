@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import projects from "../data/data";
 
 const categories = ["UI/UX Design", "Social Media Design", "Graphic Design"];
@@ -7,7 +6,6 @@ const categories = ["UI/UX Design", "Social Media Design", "Graphic Design"];
 const Projects = () => {
   const [activeCategory, setActiveCategory] = useState("UI/UX Design");
   const [currentPage, setCurrentPage] = useState(1);
-  const navigate = useNavigate();
 
   const itemsPerPage = 9;
   const filteredProjects = projects.filter(
@@ -90,13 +88,17 @@ const Projects = () => {
                   backgroundColor: "#111",
                   cursor: "pointer",
                 }}
-                onClick={() => navigate(`/projects/${project.id}`)}
+                onClick={() => {
+                  if (project.url) {
+                    window.open(project.url, "_blank", "noopener noreferrer");
+                  }
+                }}
               >
                 {/* Image 4:3 */}
                 <div
                   style={{
                     width: "100%",
-                    aspectRatio: "4 / 3", // ✅ biar rasio 4:3
+                    aspectRatio: "4 / 3", // ✅ rasio 4:3
                     overflow: "hidden",
                   }}
                 >
@@ -130,9 +132,10 @@ const Projects = () => {
                     style={{
                       fontSize: "1rem",
                       marginBottom: "5px",
-                      whiteSpace: "nowrap", // ✅ 1 baris saja
+                      whiteSpace: "nowrap", // ✅ hanya 1 baris
                       overflow: "hidden",
                       textOverflow: "ellipsis",
+                      fontWeight: "700", // ✅ judul ditebalkan
                     }}
                   >
                     {project.title}
