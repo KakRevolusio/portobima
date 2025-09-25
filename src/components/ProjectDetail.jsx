@@ -8,7 +8,7 @@ const ProjectDetail = () => {
 
   if (!project) {
     return (
-      <div className="container text-center py-5">
+      <div className="container text-center py-6">
         <h2>Project not found</h2>
         <Link to="/" className="btn btn-secondary mt-3">
           Back to Home
@@ -24,6 +24,7 @@ const ProjectDetail = () => {
         color: "#fff",
         padding: "60px 0",
       }}
+      className="py-6"
     >
       <div className="container">
         <h2 className="fw-bold mb-4">{project.title}</h2>

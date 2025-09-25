@@ -4,7 +4,7 @@ import profileImg from "/Container1.png";
 const Hero = () => {
   return (
     <>
-      <section className="hero" id="home">
+      <section className="hero py-4 my-5" id="home">
         <div className="container">
           <h1 className="texhero">
             Hello i’m Beema
@@ -21,7 +21,7 @@ const Hero = () => {
       </section>
 
       {/* Statistics Section */}
-    <section className="statistics py-2">
+    <section className="statistics py-5 my-5">
   <div className="container">
     <div className="row">
       <div className="col-md-3 col-6 mb-4 text-start">

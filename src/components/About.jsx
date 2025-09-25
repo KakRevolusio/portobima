@@ -4,7 +4,7 @@ const About = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <section className="about py-5" id="about">
+    <section className="about py-6 my-5" id="about">
       <div className="container">
         {/* HAPUS align-items-center supaya rata atas */}
         <div className="row">

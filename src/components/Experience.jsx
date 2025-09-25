@@ -39,7 +39,7 @@ const Experience = () => {
 
   return (
     <section
-      className="experience-section py-5"
+      className="experience-section py-6 my-5"
       style={{ backgroundColor: "rgba(21, 21, 21, 1)", color: "#fff" }}
     >
       <div className="container">
@@ -72,7 +72,7 @@ const Experience = () => {
         {experiences.map((exp, index) => (
           <div
             key={exp.id}
-            className="experience-item py-4 border-bottom border-secondary"
+            className="experience-item py-6 border-bottom border-secondary"
           >
             {/* Baris Utama */}
             <div className="row align-items-start">
@@ -131,7 +131,7 @@ const Experience = () => {
                 <div className="ms-auto">
                   <button
                     onClick={() => toggleDropdown(index)}
-                    className="btn fw-bold px-4 py-2"
+                    className="btn fw-bold px-4 py-4"
                     style={{
                       backgroundColor:
                         openIndex === index

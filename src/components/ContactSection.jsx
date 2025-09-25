@@ -4,7 +4,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="contact-section"
+      className="contact-section my-5 py-6"
       style={{
         backgroundColor: "rgba(21, 21, 21, 1)",
         color: "#fff",
