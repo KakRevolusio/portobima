@@ -31,6 +31,16 @@ const Experience = () => {
       description:
         "Responsible for visual design, brand identity, and supporting digital marketing campaigns with high-quality graphics.",
     },
+    {
+      id: 4,
+      position:
+        "Course Laboratory Assistant at University of Amikom Yogyakarta",
+      location: "Sleman, Indonesia",
+      status: "Internship",
+      duration: "18 months",
+      description:
+        "Assisting students with lab activities, preparing learning materials, and maintaining academic software environments.",
+    },
   ];
 
   const toggleDropdown = (index) => {
@@ -39,7 +49,7 @@ const Experience = () => {
 
   return (
     <section
-      className="experience-section py-6 my-5"
+      className="experience-section py-5"
       style={{ backgroundColor: "rgba(21, 21, 21, 1)", color: "#fff" }}
     >
       <div className="container">
@@ -49,8 +59,8 @@ const Experience = () => {
             <p
               style={{
                 color: "#8d8d8d",
-                fontSize: "1.5rem",
-                textAlign: "justify",
+                fontSize: "1.4rem",
+                lineHeight: "1.6rem",
               }}
             >
               Whether it's designing a sleek user interface or
@@ -72,66 +82,78 @@ const Experience = () => {
         {experiences.map((exp, index) => (
           <div
             key={exp.id}
-            className="experience-item py-6 border-bottom border-secondary"
+            className="experience-item py-4"
+            style={{
+              borderBottom: "2px solid rgba(255, 255, 255, 0.05)", // 🔴 garis merah lembut (opacity 25%)
+              marginBottom: "1.2rem",
+
+            }}
           >
             {/* Baris Utama */}
-            <div className="row align-items-start">
-              {/* Kolom 1: Number + Position */}
-              <div className="col-md-4 d-flex align-items-start">
-                <h2 className="fw-bold me-3 mb-0">
+            <div
+              className="d-flex justify-content-between align-items-start"
+              style={{ gap: "1.2rem" }}
+            >
+              {/* Kolom 1 */}
+              <div
+                className="d-flex align-items-start"
+                style={{ flexBasis: "40%" }}
+              >
+                <h2
+                  className="fw-bold me-3 mb-0"
+                  style={{ fontSize: "2rem", color: "#fff" }}
+                >
                   {String(exp.id).padStart(2, "0")}
                 </h2>
                 <div>
-                  <small style={{ color: "#aaa" }}>Position</small>
+                  <small style={{ color: "#8d8d8d" }}>Position</small>
                   <p
-                    className="mb-0"
-                    style={{ fontSize: "1.1rem", textAlign: "justify" }}
+                    className="mb-0 fw-semibold"
+                    style={{
+                      fontSize: "1.1rem",
+                      lineHeight: "1.5rem",
+                      textAlign: "left",
+                    }}
                   >
                     {exp.position}
                   </p>
                 </div>
               </div>
 
-              {/* Kolom 2: Location */}
-              <div className="col-md-2">
-                <small style={{ color: "#aaa" }}>Location Work</small>
-                <p
-                  className="mb-0"
-                  style={{ fontSize: "1.05rem", textAlign: "justify" }}
-                >
-                  {exp.location}
-                </p>
-              </div>
-
-              {/* Kolom 3: Status */}
-              <div className="col-md-2">
-                <small style={{ color: "#aaa" }}>Work status</small>
-                <p
-                  className="mb-0"
-                  style={{ fontSize: "1.05rem", textAlign: "justify" }}
-                >
-                  {exp.status}
-                </p>
-              </div>
-
-              {/* Kolom 4: Duration + Button */}
-              <div className="col-md-4 d-flex justify-content-between align-items-start">
-                {/* Bagian kiri: Duration */}
+              {/* Kolom kanan */}
+              <div
+                className="d-flex justify-content-end align-items-start flex-wrap"
+                style={{
+                  flexBasis: "60%",
+                  gap: "5rem",
+                  textAlign: "right",
+                }}
+              >
                 <div>
-                  <small style={{ color: "#aaa" }}>Duration</small>
-                  <p
-                    className="mb-0"
-                    style={{ fontSize: "1.05rem", textAlign: "justify" }}
-                  >
+                  <small style={{ color: "#8d8d8d" }}>Location Work</small>
+                  <p className="mb-0" style={{ fontSize: "1.05rem" }}>
+                    {exp.location}
+                  </p>
+                </div>
+
+                <div>
+                  <small style={{ color: "#8d8d8d" }}>Work status</small>
+                  <p className="mb-0" style={{ fontSize: "1.05rem" }}>
+                    {exp.status}
+                  </p>
+                </div>
+
+                <div>
+                  <small style={{ color: "#8d8d8d" }}>Duration</small>
+                  <p className="mb-0" style={{ fontSize: "1.05rem" }}>
                     {exp.duration}
                   </p>
                 </div>
 
-                {/* Bagian kanan: Tombol */}
-                <div className="ms-auto">
+                <div>
                   <button
                     onClick={() => toggleDropdown(index)}
-                    className="btn fw-bold px-4 py-4"
+                    className="btn fw-bold px-4 py-2"
                     style={{
                       backgroundColor:
                         openIndex === index
@@ -139,6 +161,7 @@ const Experience = () => {
                           : "rgba(40, 40, 40, 1)",
                       color: openIndex === index ? "#000" : "#8d8d8d",
                       borderRadius: "25px",
+                      fontSize: "1rem",
                     }}
                   >
                     {openIndex === index ? "Hide ▲" : "Show ▼"}
@@ -151,11 +174,12 @@ const Experience = () => {
             {openIndex === index && (
               <div className="row mt-3">
                 <div className="col-md-8 offset-md-4">
-                  <small style={{ color: "#aaa" }}>Job Description</small>
+                  <small style={{ color: "#8d8d8d" }}>Job Description</small>
                   <p
                     style={{
                       fontSize: "1.05rem",
                       color: "#bbb",
+                      lineHeight: "1.6rem",
                       textAlign: "justify",
                     }}
                   >

@@ -51,7 +51,7 @@ const Services = () => {
   };
 
   return (
-    <section style={styles.section} id="services">
+    <section style={styles.section} id="services"  className="faq-section py-5 my-5">
       <div className="container">
         <div className="row align-items-start">
           {/* Kolom kiri */}

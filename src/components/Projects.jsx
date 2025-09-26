@@ -26,7 +26,7 @@ const Projects = () => {
         color: "#fff",
         padding: "60px 0",
       }}
-      className="py-6 my-5"
+      className="py-5 my-5"
     >
       <div className="container text-center">
         {/* Header */}

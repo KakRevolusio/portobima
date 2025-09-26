@@ -8,32 +8,32 @@ const FAQ = () => {
       id: 1,
       question: "What services do you offer?",
       answer:
-        "I specialize in web design, mobile app design, UI/UX design, branding & visual identity, graphic design, and social media design. I provide end-to-end creative solutions from concept to final execution."
+        "I specialize in web design, mobile app design, UI/UX design, branding & visual identity, graphic design, and social media design. I provide end-to-end creative solutions from concept to final execution.",
     },
     {
       id: 2,
       question: "Can you redesign my existing website/brand?",
       answer:
-        "Yes, I can help redesign your website or brand with a fresh and modern look while keeping your identity intact."
+        "Yes, I can help redesign your website or brand with a fresh and modern look while keeping your identity intact.",
     },
     {
       id: 3,
       question: "Do you provide design consultation services?",
       answer:
-        "Absolutely. I offer consultation sessions to help you identify design opportunities, improvements, and solutions."
+        "Absolutely. I offer consultation sessions to help you identify design opportunities, improvements, and solutions.",
     },
     {
       id: 4,
       question: "Can you help with print design as well as digital?",
       answer:
-        "Yes, I create both print and digital designs, ensuring brand consistency across all media."
+        "Yes, I create both print and digital designs, ensuring brand consistency across all media.",
     },
     {
       id: 5,
       question: "How do you stay updated with design trends?",
       answer:
-        "I keep up with the latest design blogs, attend workshops, and continuously explore new tools and techniques to stay current."
-    }
+        "I keep up with the latest design blogs, attend workshops, and continuously explore new tools and techniques to stay current.",
+    },
   ];
 
   const toggleDropdown = (index) => {
@@ -43,7 +43,7 @@ const FAQ = () => {
   return (
     <section
       id="faq"
-      className="faq-section py-6 my-5"
+      className="faq-section py-5 my-5"
       style={{ backgroundColor: "rgba(21, 21, 21, 1)", color: "#fff" }}
     >
       <div className="container">
@@ -51,7 +51,8 @@ const FAQ = () => {
         <div className="row mb-6">
           <div className="col-md-6">
             <h2 className="fw-bold" style={{ fontSize: "2.5rem" }}>
-              Got <span style={{ color: "rgba(168, 255, 54, 1)" }}>Questions?</span>
+              Got{" "}
+              <span style={{ color: "rgba(168, 255, 54, 1)" }}>Questions?</span>
               <br /> We’ve Got Answers.
             </h2>
           </div>
@@ -67,7 +68,10 @@ const FAQ = () => {
         {faqs.map((faq, index) => (
           <div
             key={faq.id}
-            className="faq-item py-4 border-bottom border-secondary"
+            className="faq-item py-4"
+            style={{
+              borderBottom: "2px solid rgba(255, 255, 255, 0.05)", // ✅ garis putih pudar
+            }}
           >
             {/* Pertanyaan */}
             <div className="row align-items-start">
@@ -101,7 +105,13 @@ const FAQ = () => {
             {openIndex === index && (
               <div className="row mt-3">
                 <div className="col-md-10">
-                  <p style={{ fontSize: "1.05rem", color: "#aaa", lineHeight: "1.7" }}>
+                  <p
+                    style={{
+                      fontSize: "1.05rem",
+                      color: "#aaa",
+                      lineHeight: "1.7",
+                    }}
+                  >
                     {faq.answer}
                   </p>
                 </div>
